@@ -195,19 +195,19 @@ Problème                                                                    Sol
 
 
 
-Serveur ne démarre pas                              Vérifiez que server.py est dans le dossier. Installez les dépendances : pip install Pillow opencv-python cryptography.
+Serveur ne démarre pas                      |  Vérifiez que server.py est dans le dossier. Installez les dépendances : pip install Pillow opencv-python cryptography.
 
 
-Client ne se connecte pas                          Vérifiez l'IP saisie. Testez : ping 192.168.1.100 et nc -zv 192.168.1.100 4444.
+Client ne se connecte pas                    |      Vérifiez l'IP saisie. Testez : ping 192.168.1.100 et nc -zv 192.168.1.100 4444.
 
 
-Icône non appliquée                                 Assurez-vous d'importer un .png valide. Testez : python -c "from PIL import Image; Image.open('edge.png').show()".
+Icône non appliquée                           |      Assurez-vous d'importer un .png valide. Testez : python -c "from PIL import Image; Image.open('edge.png').show()".
 
 
-Compilation échoue                                 Installez PyInstaller : pip install pyinstaller. Vérifiez les logs pour l'erreur.
+Compilation échoue                             |    Installez PyInstaller : pip install pyinstaller. Vérifiez les logs pour l'erreur.
 
 
-Streaming/screenshot échoue                        Exécutez le client sur un bureau Windows. Testez : python -c "from PIL import ImageGrab; ImageGrab.grab()".
+Streaming/screenshot échoue                     |   Exécutez le client sur un bureau Windows. Testez : python -c "from PIL import ImageGrab; ImageGrab.grab()".
 
 
 
