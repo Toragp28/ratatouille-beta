@@ -1,4 +1,4 @@
-🐀 RAT Control Panel
+🐀 RAT Control Panel (ratatouille)
 
 Bienvenue dans RAT Control Panel, un outil éducatif de Remote Administration Tool (RAT) conçu pour les environnements de test de sécurité, les compétitions CTF, ou les laboratoires d'apprentissage. Ce projet fournit un serveur, un client, et une interface graphique intuitive pour exécuter des commandes à distance, capturer des écrans, diffuser en temps réel, et plus encore, avec une touche de discrétion grâce à la personnalisation des icônes.
 
