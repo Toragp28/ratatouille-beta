@@ -48,9 +48,10 @@ Une icône (32x32 ou 64x64 pixels) pour personnaliser l'exécutable du client.
 Suivez ces étapes pour configurer le projet :
 
 Cloner le projet (ou téléchargez les fichiers) :
-git clone https://github.com/votre-repo/rat-control-panel.git
+```bash
+git clone 
 cd rat-control-panel
-
+```
 
 Installer les dépendances :Exécutez la commande suivante pour installer toutes les bibliothèques nécessaires :
 pip install Pillow opencv-python cryptography pyinstaller
