@@ -191,7 +191,7 @@ Thu May 15 17:00:20 2025: Compilation réussie. Exécutable généré dans dist/
 
 
 
-Problème                                                                    Solution
+Problème                                        |                            Solution
 
 
 
